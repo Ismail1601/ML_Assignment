@@ -11,7 +11,7 @@ df['sex'] = df['sex'].map({'MALE': 0, 'FEMALE': 1})
 island_map = {'Biscoe': 0, 'Dream': 1, 'Torgersen': 2}
 df['island'] = df['island'].map(island_map)
 
-# 4. Define Features (X) using the "culmen" names you found
+# 4. Define Features (X)
 X = df[['island', 'culmen_length_mm', 'culmen_depth_mm', 'flipper_length_mm', 'body_mass_g', 'sex']]
 y = df['species']
 
@@ -19,4 +19,5 @@ y = df['species']
 model = RandomForestClassifier()
 model.fit(X, y)
 joblib.dump(model, 'penguin_model.pkl')
+
 print("Model trained and saved successfully as penguin_model.pkl!")
