@@ -1,8 +1,4 @@
-Title: Palmer Archipelago Penguin Dataset Classification
-
-
-Libraries required:
-Streamlit
-Pandas
-Scikit-learn
-Joblib
+pandas
+scikit-learn
+streamlit
+joblib
